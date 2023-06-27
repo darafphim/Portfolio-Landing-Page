@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        
+    </header>
+
+    <section class="home">
+        <div class="home-sci">
+            <a href="https://www.facebook.com/christianjerome27"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+            <a href="#"><i class='bx bxl-gmail' ></i></a>
+        </div>
+
+        <div class="container">
+            <section class="one">
+            <div class="home-content">
+                <h1>Hello, I am Christian Jerome</h1>
+                <h3>Grade 12 ICT student</h3>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor inventore impedit eius assumenda, libero quam provident, earum, quaerat fugiat rem itaque quis molestias accusantium ratione eligendi ad officiis nulla? Aut.</p>
+            </section>
+            </div>
+        </div>
+
+
+
+        <span class="home-imgHover"></span>
+    </section>
+
+</body>
+</html>
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Monospace;
+}
+
+body {
+    color: #ededed;
+    background: url('cat.jpg') no-repeat left center fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    margin-left: 980px;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 35px;
+    font-family: Monospace;
+    font-weight: 600;
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    animation: showRight 1s ease forwards;
+    animation-delay: .9s;
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 25px;
+    font-family: Monospace;
+    font-weight: 600;
+}
+
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.4s;
+}
+
+.home-content p {
+    position: relative;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0px;
+    padding-bottom: 310px;
+}
+
+.home-sci::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.4s;
+    z-index: 2;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: #FFFFFF;
+}
+
+.home-sci a:hover img {
+    opacity: 0.5s;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 1065px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+    animation: manipActiveHover .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+}
+
+.home-imgHover:hover {
+    background: #000000;
+    opacity: .7;
+}
+
+.home-imgHover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 100;
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes manipActiveHover {
+    100% {
+        pointer-events: auto;
+    }
+}
